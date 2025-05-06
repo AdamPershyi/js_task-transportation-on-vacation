@@ -11,12 +11,12 @@ function calculateRentalCost(days) {
   const longDays = 7;
   const longDaysDisc = 50;
 
-  if (days >= shortDays && days < longDays) {
-    return priceOfDay * days - shortDaysDisc;
-  }
-
   if (days >= longDays) {
     return priceOfDay * days - longDaysDisc;
+  }
+
+  if (days >= shortDays) {
+    return priceOfDay * days - shortDaysDisc;
   }
 
   return days * priceOfDay;
